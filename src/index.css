@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 2%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --bg-deep: 0 0% 2%;
+    --bg-card: 0 0% 4%;
+    --bg-elevated: 0 0% 6%;
+    --text-primary: 0 0% 100%;
+    --text-secondary: 0 0% 65%;
+    --text-muted: 0 0% 40%;
+    --border-subtle: 0 0% 15%;
+    --border-hover: 0 0% 30%;
+
+    /* Glass effect */
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+
+    /* Social brand colors */
+    --linkedin: 201 100% 35%;
+    --instagram: 340 75% 54%;
+    --youtube: 0 100% 50%;
+    --spotify: 141 73% 42%;
+  }
+
+  .dark {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amaranth', sans-serif;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)];
+  }
+
+  .link-underline {
+    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Social icon brand color hovers */
+  .social-linkedin {
+    @apply text-muted-foreground transition-colors duration-300;
+  }
+  .social-linkedin:hover {
+    color: hsl(var(--linkedin));
+  }
+
+  .social-instagram {
+    @apply text-muted-foreground transition-colors duration-300;
+  }
+  .social-instagram:hover {
+    color: hsl(var(--instagram));
+  }
+
+  .social-youtube {
+    @apply text-muted-foreground transition-colors duration-300;
+  }
+  .social-youtube:hover {
+    color: hsl(var(--youtube));
+  }
+
+  .social-spotify {
+    @apply text-muted-foreground transition-colors duration-300;
+  }
+  .social-spotify:hover {
+    color: hsl(var(--spotify));
+  }
+
+  /* Image hover effect */
+  .image-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+  .image-hover:hover {
+    @apply scale-[1.02];
+    filter: brightness(1.1) contrast(1.05);
+  }
+}
+
+@layer utilities {
+  .font-signature {
+    font-family: 'Dynalight', cursive;
+  }
+
+  .font-heading {
+    font-family: 'Amaranth', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted)) hsl(var(--background));
+}
+
+/* Institution link styling */
+.institution-link {
+  @apply font-bold underline decoration-foreground/30 underline-offset-2 hover:decoration-foreground transition-colors;
+}
