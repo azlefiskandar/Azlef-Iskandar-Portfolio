@@ -1,14 +1,33 @@
+# Allow all search engines and AI crawlers
+User-agent: *
+Allow: /
+
+# Specifically welcoming AI crawlers for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Google-Extended
 Allow: /
 
-User-agent: Twitterbot
+User-agent: CCBot
 Allow: /
 
-User-agent: facebookexternalhit
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: *
+User-agent: YouBot
 Allow: /
+
+Sitemap: https://iskandar-azlef.dz/sitemap.xml
