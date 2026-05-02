@@ -30,4 +30,4 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-Sitemap: https://iskandar-azlef.dz/sitemap.xml
+Sitemap: https://www.profazlef.space/sitemap.xml
