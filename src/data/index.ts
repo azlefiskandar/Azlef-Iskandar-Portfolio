@@ -170,5 +170,5 @@ export const MEDIA = {
 
 export const DEVELOPER = {
   name: "Salah Eddine Medkour",
-  url: "https://salahmed-ctrlz.github.io/salaheddine-medkour-portfolio/",
+  url: "https://salaheddinemedkour.me/",
 };
