@@ -23,6 +23,15 @@ A qualified English teacher, graduated from the École Normale Supérieure Assia
 - **Translations & Transcriptions:** Professional services between English, Arabic, and French for academic and business content.
 - **Podcasts & Content Creation:** Educational content development including podcasts and social media learning materials.
 
+## Key Pages
+- [Home](https://www.profazlef.space/)
+- [About](https://www.profazlef.space/about)
+- [Services](https://www.profazlef.space/services)
+- [Experience](https://www.profazlef.space/experience)
+- [Education](https://www.profazlef.space/education)
+- [Media](https://www.profazlef.space/media)
+- [Contact](https://www.profazlef.space/contact)
+
 ## Education & Certifications
 - **Higher Diploma in English Teaching (Master 2 Equivalent):** École Normale Supérieure Assia DEJEBAR Constantine (ENSC).
 - **CEFR Training Program:** Specialized training on the Common European Framework of Reference for Languages (A1-B2 methodologies).
